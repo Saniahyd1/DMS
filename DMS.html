@@ -1,0 +1,136 @@
+<?php
+
+include 'connect.php';
+
+if(isset($_POST['submit']))
+{
+    $name=$_POST['name'];
+    $mobile=$_POST['mobile'];
+    $email=$_POST['email'];
+    $query=$_POST['query'];
+
+    
+
+    $sql="insert into query(name,mobile,email,query) values ('$name','$mobile','$email','$query')";
+
+    $result=mysqli_query($con,$sql);
+
+    if($result)
+    {
+        
+         header('location:display.php');
+    }
+    else
+    {
+        die(mysqli_error($con));
+    }
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Disaster Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="logo.png" class="logo">
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#feature">Agencies</a></li>
+                <li><a href="#">emergency no.</a></li>
+                <li><a href="#">Case Studies</a></li>
+                <li><a href="#">Query</a></li>
+            </ul>
+        </nav>
+        <div class="heading">
+            <h1>DISASTER MANAGEMENT SYSTEM</h1>
+            <a href="#">News</a>
+        </div>
+    </div>
+    <section id="introduction">
+        <h1>Importance of disaster management</h1>
+        <p>Disaster management plays a crucial role in protecting lives, safeguarding infrastructure, and promoting sustainable development.<br> Here are several key reasons why disaster management is important:<br>
+            <h2>Saving Lives: </h2><p>Effective disaster management helps minimize casualties by providing timely warnings, evacuation procedures, and emergency response services during disasters. It ensures that people are prepared to cope with emergencies, reducing the loss of life.<br>
+            <h2>Reducing Economic Losses:</h2><p> Disasters can cause significant damage to infrastructure, homes, businesses, and agriculture, leading to economic setbacks. Disaster management aims to mitigate these losses by implementing measures to strengthen infrastructure, enhance resilience, and promote risk reduction strategies.</p>
+            <h2>Preserving Infrastructure and Assets: </h2><p>By identifying and addressing vulnerabilities in infrastructure and critical facilities, disaster management efforts help protect essential services such as transportation, communication, water supply, and energy distribution networks.</p>
+            <h2>Promoting Sustainable Development:</h2> <p>Integrating disaster risk reduction into development planning promotes sustainable development practices. By considering disaster risks in land use planning, building codes, and environmental management, communities can reduce vulnerability and enhance resilience to disasters.</p>
+            <h2>Ensuring Continuity of Services:</h2><p> Disaster management includes planning for business continuity and ensuring the uninterrupted delivery of essential services such as healthcare, education, and public safety during and after disasters.</p>
+            <h2>Enhancing Community Resilience: </h2><p>Disaster management fosters community resilience by empowering individuals, communities, and organizations to prepare for, respond to, and recover from disasters. It strengthens social cohesion, fosters collaboration, and builds trust among stakeholders.</p>
+            <h2>Environmental Protection:</h2><p> Disasters can have significant environmental impacts, including pollution, habitat destruction, and ecosystem degradation. Disaster management promotes environmentally sustainable practices and integrates environmental considerations into disaster risk reduction efforts.</p>
+            <h2>Addressing Climate Change Challenges:</h2><p> Climate change is exacerbating the frequency and intensity of many types of disasters, including hurricanes, floods, droughts, and wildfires. Disaster management strategies incorporate climate adaptation measures to address these challenges effectively.</p>
+            <h2>Ensuring Effective Response and Recovery:</h2> <p>Comprehensive disaster management plans and protocols enable coordinated and effective responses to emergencies, facilitating rapid recovery and rehabilitation efforts in affected areas.</p>
+            <h2>Building National and International Cooperation:</h2><p> Disaster management fosters collaboration and cooperation among national governments, local authorities, civil society organizations, and international agencies. Sharing knowledge, resources, and expertise enhances collective resilience and strengthens global responses to disasters.<br></p>
+            <p>In summary, disaster management is essential for saving lives, reducing economic losses, promoting sustainable development, enhancing community resilience, protecting the environment, addressing climate change challenges, ensuring continuity of services, and fostering cooperation at national and international levels. 
+                Investing in disaster management not only mitigates risks but also contributes to building safer, more resilient, and sustainable societies.        
+            </p>
+    </section>
+    <section id="feature">
+        <h1>Agencies</h1>
+         <div class="flex-container">
+            
+            <div class="flex-item">
+              <h2>The National Disaster Management Authority (NDMA)</h2>
+              <p>The NDMA is the apex body for disaster management in India, responsible for formulating policies, plans, and guidelines for disaster management.<br>
+                It coordinates response efforts during disasters and assists states and Union Territories in their disaster management activities.<br>
+                NDMA works to build capacity at various levels and promotes research and development in disaster management.<br>
+                 <img src="ndma.png" class="dma"></p>
+            </div>
+            <div class="flex-item">
+                <h2>National Disaster Response Force(NDRF)</h2>
+                <p>The NDRF is a specialized force established for the purpose of disaster response, rescue, relief, and recovery operations.<br>
+                    It operates under the NDMA and is responsible for providing specialized assistance during disasters such as earthquakes, floods, cyclones, and other natural or man-made disasters.<br>
+                    NDRF teams are strategically located across the country for quick deployment during emergencies.<br>
+                     <img src="ndrf.jpg" class="dma"></p>
+            
+            </div>
+            <div class="flex-item">
+                <h2>National Institute of Disaster Management(NIDM)</h2>
+                <p>NIDM is an apex national institute for training and capacity development in disaster management.<br>
+                    It conducts training programs, workshops, research, and documentation in various aspects of disaster management.<br>
+                    NIDM serves as a resource center for sharing knowledge and best practices in disaster risk reduction and management.
+                    <br>
+                    <img src="nidm.jpg" class="dma"></p>
+            </div>
+            
+        </div>   
+        <div class="flex-container2">
+            <div class="flex-item">
+                <h2>State Disaster Management Authority(SDMA)</h2>
+                <p>SDMA is established at the state level to oversee and coordinate disaster management efforts within the respective state.<br>
+                    It formulates state-level policies and plans for disaster preparedness, response, and recovery.<br>
+                    SDMAs work closely with other state agencies, district administrations, and community organizations to enhance disaster resilience.</p>
+                    <br><img src="SDMA.png" class="dma"></p>
+                </p>
+            </div>
+            <div class="flex-item">
+                <h2>Odisha State Disaster Management Authority</h2>
+                <p>Odisha State Disaster Management Authority is an agency of the Department of Revenue & Disaster Management whose primary purpose is to carry out responses to natural or man-made disasters and for capacity-building in disaster resiliency and crisis response.
+                     It was established as the Odisha State Disaster Mitigation Authority by a resolution of the Department of Finance of the Government of Odisha on 28 December 1999, as a response to the death toll and damage caused by a 1999 supercyclone.
+                    <br><img src="osdma.jpg" class="dma"></p>
+                </p>
+            </div>
+        </div>  
+    </section>
+    <section id="query">
+        <h1>Query</h1>
+        <form method="post">
+            Name : <input class="form-control form-control-lg" type="text" placeholder="enter your name" aria-label=".form-control-lg" name ="name" id="1"><br>
+            Moblie No.: <input class="form-control form-control-lg" type="text" placeholder=" moblie no." aria-label=".form-control-lg" moblie = "moblie" id=""><br>
+            Email: <input class="form-control form-control-lg" type="email" placeholder="enter email address" aria-label=".form-control-lg" name ="email" id=""><br>
+            Any Query/Comment:<input class="form-control form-control-lg" type="text" placeholder="enter query" aria-label=".form-control-lg" name ="Query" id=""><br>
+        <button name="submit">Submit</button>
+        </form>
+        </section>
+        <section id="emergence">
+            <h1>
+        
+
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+.hero {
+    width:100%;
+    height: 100vh;
+    background-image: url("DS.jpg");
+    padding-bottom: 6%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+nav{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav.logo{
+    width: 0.5%;
+}
+#introduction h1{
+    font-size: 45px;
+    text-align: center;
+    color: #0a6c71;
+    padding-top: 5vh;
+    font-family:'Times New Roman', Times, serif;
+    font-weight:bolder;
+    padding-bottom: 2vh;
+}
+#introduction h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 37px;
+    font-weight: 600;
+}
+#introduction p{
+    font-size: 26px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+nav ul li a{
+    text-decoration:none ;
+    color: azure;
+    font-size: 20px ;
+}
+.heading{
+    text-align: center;
+}
+.heading h1{
+    font-size: 50px;
+    color: beige;
+    text-align: center;
+    padding-top:20%;
+    font-weight: 600;
+}
+.heading a{
+    text-decoration: none;
+    display: inline-block;
+    color: blanchedalmond;
+    font-size: 24px;
+    border: 2px solid #fff;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 35px;
+    padding-inline: 72px;
+  }
+  #feature h1{
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #0a6c71;
+  }
+  .flex-item {
+    width: 30%; 
+    border: 1px solid #f2cece;
+    border: 1px solid #f2cece;
+    position: relative;
+    text-align: center;
+    background-color: rgb(231, 233, 170);
+  }
+  .flex-item h2{
+    font-size: 35px;
+  }
+  .flex-item p{
+    font-size: 20px;
+  }
+  
+ 
+  #feature{
+    font-size: 15px;
+    position: center;
+    margin: auto;
+    left: auto;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+  .flex-container2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding-inline: 72px;
+  }
+  .dma{
+    height:35vh;
+    width: 35vh;
+    padding-top: 15px;
+    padding-bottom: 5px;
+  }
